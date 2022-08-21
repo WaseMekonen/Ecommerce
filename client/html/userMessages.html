@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d6ed6dee1c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
+    <link rel="stylesheet" href="/css/userMessages.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&family=Racing+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>BigElectronic</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="/index.html"
+          ><div class="brand-title">
+            <span style="color: #41b57d">Big</span>Electronic
+          </div></a
+        >
+        <i class="fas fa-bars" id="burgerMenu"></i>
+        <ul id="menu" class="hide-menu">
+          <li><a href="/html/drones.html">Drones</a></li>
+          <li><a href="/html/consoles.html">Consoles</a></li>
+          <li><a href="/html/mobiles.html">Mobiles</a></li>
+          <li><a href="/html/laptops.html">Laptops</a></li>
+          <li>
+            <a href="/html/cart.html"
+              ><i class="fas fa-shopping-cart" id="cart-icon"
+                ><span id="itemCounter"></span></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="user-messages">Users Messages</h1>
+      <div class="userMessagesContainer" id="userMessagesContainer">
+        <div class="headers">
+          <h4>Full Name</h4>
+          <h4>E-mail</h4>
+          <h4>Message</h4>
+      </div>
+    </main>
+    <footer>
+      <section class="contact-us">
+        <h3>contact us</h3>
+        <p>+972 549323827</p>
+        <p>custtomer@BigElect.com</p>
+        <p>Hayarkon 233, tel-aviv</p>
+      </section>
+      <section class="follow-us">
+        <h3>Follow us</h3>
+        <div>
+          <a href="#"><img src="/images/home/facebook.png" alt="facebook" /></a>
+          <a href="#"
+            ><img src="/images/home/instagram.png" alt="instagram"
+          /></a>
+          <a href="#"><img src="/images/home/twitter.png" alt="twitter" /></a>
+          <a href="#"><img src="/images/home/linkedin.png" alt="linkedin" /></a>
+          <a href="#"><img src="/images/home/youtube.png" alt="youtube" /></a>
+        </div>
+      </section>
+    </footer>
+
+    <script src="/js/navbar.js"></script>
+    <script src="/js/userMessages.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+.adminMain {
+  position: relative;
+  margin-top: 4vh;
+  width: 100%;
+  height: 468px;
+  background-color: #e0e0e0;
+}
+
+.form-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3%;
+  padding-top: 7%;
+}
+
+.admin-container {
+  display: flex;
+  justify-content: center;
+}
+#addProductsPageLink {
+  display: flex;
+  width: 40%;
+  height: 168px;
+  background-color: rgb(74, 121, 207);
+  margin-right: 23px;
+  margin-left: 23px;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  border-radius: 7%;
+}
+
+#updateProductsPageLink {
+  display: flex;
+  width: 40%;
+  height: 168px;
+  background-color: rgb(127, 221, 224);
+  margin-right: 23px;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  border-radius: 7%;
+}
+#showUsersMessagesPageLink {
+  display: flex;
+  width: 40%;
+  height: 168px;
+  background-color: rgb(149, 173, 149);
+  margin-right: 23px;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  border-radius: 7%;
+}

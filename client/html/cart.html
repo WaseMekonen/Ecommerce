@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/d6ed6dee1c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/cart.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&family=Racing+Sans+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cart</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="/index.html"
+          ><div class="brand-title">
+            <span style="color: #41b57d">Big</span>Electronic
+          </div></a
+        >
+        <i class="fas fa-bars" id="burgerMenu"></i>
+        <ul id="menu" class="hide-menu">
+          <li><a href="/html/consoles.html">Consoles</a></li>
+          <li><a href="/html/mobiles.html">Mobiles</a></li>
+          <li><a href="/html/laptops.html">Laptops</a></li>
+          <li><a href="/html/drones.html">Drones</a></li>
+          <span id="itemCounter"></span>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="cart-heading">Your cart</h1>
+      <table class="table-heading">
+        <thead>
+          <tr>
+            <th>PRODUCT</th>
+            <th>PRICE</th>
+            <th>QUANTITY</th>
+            <th>TOTAL</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="table" id="table">
+        </tbody>
+      </table>
+      <div class="total-order">
+        <table>
+          <tr>
+            <td>Subtotal</td>
+            <td><h5 id="sub-total"></h5></td>
+          </tr>
+          <tr>
+            <td>Shipping</td>
+            <td><h5>Free</h5></td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td ><h5 id="total"></h5></td>
+          </tr>
+          <tr>
+            <td>
+              <button class="checkout-button" >checkout</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </main>
+    <footer>
+      <section class="contact-us">
+        <h3>contact us</h3>
+        <p>+972 549323827</p>
+        <p>custtomer@BigElect.com</p>
+        <p>Hayarkon 233, tel-aviv</p>
+      </section>
+      <section class="follow-us">
+        <h3>Follow us</h3>
+        <a href="#"><img src="/images/home/facebook.png" alt="facebook" /></a>
+        <a href="#"
+          ><img src="/images/home/instagram.png" alt="instagram"
+        /></a>
+        <a href="#"><img src="/images/home/twitter.png" alt="twitter" /></a>
+        <a href="#"><img src="/images/home/linkedin.png" alt="linkedin" /></a>
+        <a href="#"><img src="/images/home/youtube.png" alt="youtube" /></a>
+      </section>
+    </footer>
+    <script src="/js/cart.js"></script>
+    <script src="/js/navbar.js"></script>
+    <!-- <script src="/js/updateCart.js"></script> -->
+  </body>
+</html>

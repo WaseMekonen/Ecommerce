@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/d6ed6dee1c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/addProduct.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/pages.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&family=Racing+Sans+One&display=swap" rel="stylesheet"/>
+    <title>BigElectronic</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="/index.html"><div class="brand-title">
+          <span style="color: #41b57d">Big</span>Electronic
+        </div></a>
+        <i class="fas fa-bars" id="burgerMenu"></i>
+        <ul id="menu" class="hide-menu">
+          <li><a href="/html/drones.html">Drones</a></li>
+          <li><a href="/html/consoles.html">Consoles</a></li>
+          <li><a href="/html/mobiles.html">Mobiles</a></li>
+          <li><a href="/html/laptops.html">Laptops</a></li>
+          <li><a href="/html/cart.html"><i class="fas fa-shopping-cart" id=cart-icon><span id="itemCounter"></span></i></a>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="form-header">Add a new product</h1>
+      <div class="container">
+        
+        <form id="addProductForm">
+          </div>
+          <div class="row">
+            <div class="heading-con">
+              <label for="name">Name</label>
+            </div>
+            <div class="inputs-con">
+              <input type="text" id="form-name" placeholder="Your product name..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="heading-con">
+              <label for="price">price</label>
+            </div>
+            <div class="inputs-con">
+              <input type="number" id="form-price" placeholder="Insert a price..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="heading-con">
+            </div>
+          </div>
+          <div class="row">
+            <div class="heading-con">
+              <label for="category">category</label>
+            </div>
+            <div class="inputs-con">
+              <select id="form-category">
+                <option value="mobiles">mobiles</option>
+                <option value="laptops">laptops</option>
+                <option value="game consoles">game consoles</option>
+                <option value="drones">drones</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="heading-con">
+              <label for="image">image 1:</label>
+            </div>
+            <div class="inputs-con">
+              <input type="text" id="form-image1" placeholder="Insert a link..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="heading-con">
+              <label for="image">image 2:</label>
+            </div>
+            <div class="inputs-con">
+              <input type="text" id="form-image2" placeholder="Insert a link..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="heading-con">
+              <label for="description">description</label>
+            </div>
+            <div class="inputs-con">
+              <textarea id="form-description" placeholder="Write something.." style="height:90px"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Add Product">
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <section class="contact-us">
+        <h3>contact us</h3>
+        <p>+972 549323827</p>
+        <p>custtomer@BigElect.com</p>
+        <p>Hayarkon 233, tel-aviv</p>
+      </section>
+      <section class="follow-us">
+        <h3>Follow us</h3>
+        <div>
+          <a href="#"><img src="/images/home/facebook.png" alt="facebook"></a>
+          <a href="#"><img src="/images/home/instagram.png" alt="instagram"></a>
+          <a href="#"><img src="/images/home/twitter.png" alt="twitter"></a>
+          <a href="#"><img src="/images/home/linkedin.png" alt="linkedin"></a>
+          <a href="#"><img src="/images/home/youtube.png" alt="youtube"></a>
+        </div>
+        
+      </section>
+    </footer>
+    
+    <script src="/js/navbar.js"></script>
+    <script src="/js/addProduct.js"></script>
+  </body>
+</html>

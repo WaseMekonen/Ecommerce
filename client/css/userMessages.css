@@ -1,0 +1,36 @@
+.user-messages {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3%;
+  padding-top: 7%;
+}
+
+.userMessagesContainer {
+  background-color: rgb(224 224 224);
+  width: 100%;
+  min-height: 365px;
+  padding-bottom: 20px;
+}
+.headers {
+  margin-left: 3%;
+  margin-right: 3%;
+  background-color: rgb(156 156 156);
+  display: flex;
+  justify-content: space-around;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+.user-name {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 3%;
+  margin-right: 3%;
+  height: 149px;
+  background-color: rgb(251 251 251);
+  align-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border-bottom: 2px solid #071435;
+  margin-top: 12px;
+  margin-bottom: 10px;
+}
