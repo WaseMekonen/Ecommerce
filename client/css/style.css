@@ -9,7 +9,7 @@ a {
 
 body {
   font-family: "Quattrocento Sans", sans-serif;
-  max-width: 1500px;
+  max-width: 1800px;
   margin: 0 auto;
 }
 
@@ -37,6 +37,9 @@ header {
   height: 80px;
   padding: 5px;
   background: #071435;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .navbar {
@@ -377,6 +380,231 @@ footer {
 .follow-us img:hover {
   filter: invert(1);
 }
+
+/* PAGES STYLE */
+
+
+
+
+#itemCounter {
+  display: none;
+  position: absolute;
+  background: white;
+  color: #000000;
+  border-radius: 50%;
+  border: 1px solid #071435;
+  font-size: 12px;
+  width: 19px;
+  height: 16px;
+  right: 3px;
+  top: 6px;
+  text-align: center;
+}
+
+.fa-shopping-cart {
+  content: "\f07a";
+  font-size: 17px;
+  position: absolute;
+  top: 24 px;
+  right: 10 px;
+}
+
+.products {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.products h1 {
+  display: inline-block;
+  border-bottom: 2px solid black;
+  margin-top: 47px;
+  font-size: 3rem;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #d5d5d5;
+  max-height: 830px;
+  overflow: scroll;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 400px;
+  width: 270px;
+  border: 1px solid;
+  background-color: white;
+  margin: 12px 12px 12px 0px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  justify-content: space-evenly;
+}
+
+.card:hover {
+  box-shadow: 2px 3px 14px gray;
+  transition: 0.5s;
+}
+
+.card .image {
+  width: 100%;
+  height: 50%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.card .details {
+  display: flex;
+  height: 30%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 3px;
+}
+
+.card .details h4 {
+  font-size: 1.3rem;
+}
+
+.card .details p {
+  font-size: 1.1rem;
+  color: #4e4e4e;
+}
+
+.card-bottom {
+  display: flex;
+  width: 100%;
+  height: 10%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-bottom button {
+  background-color: #2ab050;
+  border-radius: 2px;
+  color: white;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.card-bottom .delete-button {
+  background-color: #b02a2a;
+}
+
+.card-bottom {
+  font-size: 23px;
+}
+
+
+/* responsive: */
+/* pages */
+
+
+
+/* @media only screen and (min-width: 600px) and (max-width: 963px) {
+  #cards-container .card {
+    width: 28%;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+  #cards-container .card {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+  #cards-container .card {
+    width: 60%;
+    margin-left: 74px;
+  }
+} */
+
+
+
+
+/* nav&footer */
+/* @media only screen and (max-width: 561px) {
+  .navbar ul {
+    position: absolute;
+    right: 0;
+    top: 53px;
+    padding: 0;
+    margin: 0;
+    background-color: #071435;
+    display: initial;
+  }
+
+  .navbar ul li {
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+
+  .navbar ul.hide-menu {
+    display: none;
+  }
+
+  .fa-shopping-cart:before {
+    content: "\f07a";
+    position: absolute;
+    top: -14px;
+    right: -17px;
+  }
+
+  #itemCounter {
+    display: none;
+    right: 34px;
+    top: 222px;
+  }
+
+  i.fas.fa-bars {
+    user-select: none;
+    display: block;
+  }
+
+  .contact-us {
+    display: block;
+    color: #8691a7;
+    padding-right: 3%;
+    text-align: center;
+  }
+
+  .follow-us {
+    display: block;
+    color: #8691a7;
+    width: initial;
+    padding: -8px;
+    margin-left: 0;
+    margin-top: 14px;
+    text-align: center;
+  }
+
+  .follow-us img {
+    width: 7%;
+  }
+
+
+}
+
+@media only screen and (min-width: 561px) and (max-width: 728px) {
+  .navbar ul li {
+    padding: 19px;
+    margin: 1px 0px 1px 1px;
+  }
+}
+
+ */
+
 
 
 
