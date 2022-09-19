@@ -9,8 +9,10 @@ const express = require("express"),
   {createNewMessage, getAllmessages}= require("./routes/contact");
 const dotenv = require('dotenv');
 dotenv.config();
-const URL = process.env.MONGO_URL;
-const PORT = process.env.PORT || 8080;
+const URL = "mongodb://localhost:27017/"
+const PORT = 8080;
+// const URL = process.env.MONGO_URL;
+// const PORT = process.env.PORT || 8080;
 
 app.use(express.static(clientPath));
 app.use(express.json());
