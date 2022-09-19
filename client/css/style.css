@@ -62,41 +62,10 @@ header {
   color: #41b57d;
 }
 
-/* .fas.fa-bars {
+#burgerMenu {
   display: none;
-  margin-right: 23px;
-  font-size: 25px;
-  color: white;
 }
-.navbar ul {
-  display: flex;
-  list-style: none;
-  margin: 0px;
-  padding: 0;
-}
-.navbar ul li {
-  padding: 21px;
-  margin-left: 22px;
-}
-.fa-shopping-cart {
-  position: absolute;
-  content: "\f07a";
-  color: white;
-  padding-right: 15px;
-  margin-right: 2px;
-  font-size: 1rem;
-}
-.fas fa-user{
-  content: "\f07a";
-  font-size: 23px;
-  position: absolute;
-  top: 27px;
-  right: -3px;
-}
-.navbar li:hover {
-  background-color: #41b57d;
-  cursor: pointer;
-} */
+
 .brand-title {
 
   font-size: 1.5rem;
@@ -251,6 +220,7 @@ main {
   justify-content: center;
   align-items: center;
   background: white;
+  color: #071435;
 }
 
 .laptopes-cont {
@@ -261,6 +231,7 @@ main {
   align-items: center;
   background: white;
   justify-content: center;
+  color: #071435;
 }
 
 .consoles-cont {
@@ -271,6 +242,7 @@ main {
   align-items: center;
   background: white;
   justify-content: space-around;
+  color: #071435;
 }
 
 .mobiles-cont {
@@ -281,6 +253,7 @@ main {
   justify-content: center;
   align-items: center;
   background: white;
+  color: #071435;
 }
 
 .drones-cont:hover,
@@ -360,30 +333,136 @@ main {
 }
 
 
+footer {
+  height: 300px;
+  background-color: #071435;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-us {
+  display: inline-block;
+  color: #8691a7;
+  border-right: solid 1px;
+  padding-right: 3%;
+}
+
+.contact-us h3 {
+  margin-bottom: 3%;
+}
+
+.follow-us {
+  display: inline-block;
+  width: 29%;
+  color: #8691a7;
+  padding: -8px;
+  border-right: solid 1px;
+  margin-left: 3%;
+}
+
+.follow-us h4 {
+  margin-top: 2px;
+}
+
+.follow-us img {
+  width: 12%;
+  padding: 0%;
+  filter: none;
+  margin-right: 6%;
+  margin-top: 3%;
+}
+
+.follow-us img:hover {
+  filter: invert(1);
+}
 
 
 
 
 
+/* ------------------- Media-Query ----------------------------------- */
+
+
+/* ******* MOBILE ******* */
+
+@media only screen and (max-width : 600px) {
+  #menu {
+    display: none;
+  }
+
+  .banner-head {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .banner h1 {
+    font-size: 4.6rem;
+  }
+
+  #burgerMenu {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .drone-cont {
+    display: none;
+  }
+
+  .categories {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 4px;
+  }
+
+  .drones-cont {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .laptopes-cont {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .consoles-cont {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+
+  .mobiles-cont {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+
+  .pic-cont-drones,
+  .pic-cont-lapetops,
+  .pic-cont-consoles,
+  .pic-cont-mobiles {
+    display: none;
+  }
+
+  .text-cont {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+  }
+}
 
 
 
+/* ******* TABLET ******* */
+
+@media only screen and (max-width : 768px) {}
 
 
 
+/* ******* LAPTOP ******* */
 
 
-
-
-
-
-
-
-
-
-
-
-
+@media only screen and (max-width : 1200px) {}
 
 
 
@@ -570,50 +649,6 @@ main {
   filter: brightness(0.8);
 } */
 
-footer {
-  height: 300px;
-  background-color: #071435;
-  padding: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.contact-us {
-  display: inline-block;
-  color: #8691a7;
-  border-right: solid 1px;
-  padding-right: 3%;
-}
-
-.contact-us h3 {
-  margin-bottom: 3%;
-}
-
-.follow-us {
-  display: inline-block;
-  width: 29%;
-  color: #8691a7;
-  padding: -8px;
-  border-right: solid 1px;
-  margin-left: 3%;
-}
-
-.follow-us h4 {
-  margin-top: 2px;
-}
-
-.follow-us img {
-  width: 12%;
-  padding: 0%;
-  filter: none;
-  margin-right: 6%;
-  margin-top: 3%;
-}
-
-.follow-us img:hover {
-  filter: invert(1);
-}
 
 
 
