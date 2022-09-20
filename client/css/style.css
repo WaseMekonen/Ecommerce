@@ -58,7 +58,8 @@ header {
   display: flex;
   justify-content: space-evenly;
   list-style: none;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  align-items: center;
 }
 
 #menu li a:hover {
@@ -70,19 +71,21 @@ header {
 }
 
 .brand-title {
-
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   list-style: none;
   color: white;
 }
 
 main {
+  display: flex;
   position: relative;
   width: 100%;
-  height: 1000px;
+  height: 1200px;
   background-color: #e0e0e0;
   border: 1px solid gray;
   padding: 5px;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .banner {
@@ -210,8 +213,8 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
+  grid-column-gap: 2%;
+  grid-row-gap: 5%;
 }
 
 .drones-cont {
@@ -387,26 +390,24 @@ footer {
 
 
 #itemCounter {
-  display: none;
   position: absolute;
-  background: white;
-  color: #000000;
+  background: #ff5555;
+  color: #ffffff;
   border-radius: 50%;
   border: 1px solid #071435;
-  font-size: 12px;
-  width: 19px;
-  height: 16px;
-  right: 3px;
-  top: 6px;
+  font-size: 21px;
+  font-weight: 900;
+  height: 31%;
+  width: 28px;
   text-align: center;
+  top: 13%;
+  right: 131px;
 }
 
 .fa-shopping-cart {
   content: "\f07a";
-  font-size: 17px;
-  position: absolute;
-  top: 24 px;
-  right: 10 px;
+  font-size: 1.7rem;
+  position: relative;
 }
 
 .products {
@@ -429,7 +430,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   background-color: #d5d5d5;
-  max-height: 830px;
+  max-height: 1034px;
   overflow: scroll;
   justify-content: center;
   align-items: center;

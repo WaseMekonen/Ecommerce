@@ -1,86 +1,6 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-a {
-  text-decoration: none;
-  color: white;
-}
-body {
-  font-family: "Quattrocento Sans", sans-serif;
-}
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-button {
-  margin: 0;
-  padding: 0;
-}
-button {
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-header {
-  width: 100%;
-  height: 10vh;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  background-color: #071435;
-  color: white;
-  z-index: 1;
-}
-.fas.fa-bars {
-  display: none;
-  margin-right: 23px;
-  font-size: 25px;
-  color: white;
-}
-.navbar ul {
-  display: flex;
-  list-style: none;
-  margin: 0px;
-  padding: 0;
-}
-.navbar ul li {
-  padding: 21px;
-  margin-left: 22px;
-}
-.fa-shopping-cart {
-  position: absolute;
-  content: "\f07a";
-  color: white;
-  padding-right: 15px;
-  margin-right: 2px;
-  font-size: 1rem;
-}
-.navbar li:hover {
-  background-color: #41b57d;
-  cursor: pointer;
-}
-.brand-title {
-  font-size: 34px;
-  list-style: none;
-  color: white;
-}
 
 /* cart */
-main {
-  width: 100%;
-  height: auto;
-}
+
 .cart-heading{
   margin-top: 3%;
   text-align: center;
@@ -169,7 +89,7 @@ th {
 }
 
 /* footer */
-
+/* 
 footer {
   position: absolute;
   height: 20vh;
@@ -208,7 +128,7 @@ footer {
 }
 .follow-us img:hover {
   filter: invert(1);
-}
+} */
 
 @media only screen and (min-width: 320px) and (max-width: 560px) {
   header,

@@ -19,7 +19,7 @@ function showItemByCategory(div, category, products) {
           <button class="addtocart-button"
               onclick="addProductToCart('${products[i]._id}','${products[i].name}','${products[i].price}','${products[i].description}','${products[i].category}','${products[i].image[0]}','${products[i].quantity}')">add
               to cart</button>
-          <button class="delete-button" id="delete-button" onclick="deleteItem('${products[i]._id}')">delete</button>
+         
           <span>
               <h5>${products[i].price}$</h5>
           </span>
@@ -29,6 +29,7 @@ function showItemByCategory(div, category, products) {
   }
 }
 
+//  <button class="delete-button" id="delete-button" onclick="deleteItem('${products[i]._id}')">delete</button>
 
 axios.get("/products").then((response) => {
   showItemByCategory(cardContainer, pagesCategory.id, response.data)
@@ -56,6 +57,7 @@ function addProductToCart(_id, name, price, description, category, image, quanti
     _id, name, price, description, category, image, quantity
   })
     .then(response => {
+      console.log('add product');
       console.log(response);
       updateCartCounter()
     })
@@ -68,6 +70,7 @@ function updateCartCounter() {
   axios.get("/carts/619028c92121e8d9e3a2c533")
     .then((res) => {
       const counter = res.data.products.length
+      console.log(counter);
       if (counter == 0) {
         itemCounterButoon.innerText = '';
         itemCounterButoon.style.display = "none"

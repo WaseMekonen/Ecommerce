@@ -4,7 +4,7 @@ const subTotal = document.getElementById("sub-total");
 
 function render() {
   axios
-    .get("/carts/619028c92121e8d9e3a2c533")
+    .get("/carts")
     .then((response) => {
       const newCart = response.data.products;
       console.log(response.data.products);
@@ -18,10 +18,10 @@ function render() {
 
 function updateTableProducts(coustomerCart) {
   let rawHtml = "";
-  
+
 
   for (let i = 0; i < coustomerCart.length; i++) {
-    
+
     rawHtml += `
         <tr class="item-row">
         <td class="item">
@@ -32,20 +32,16 @@ function updateTableProducts(coustomerCart) {
         </td>
         <td class="item-price">${coustomerCart[i].price}$</td>
         <td class="item-quantity">
-          <span class="minus" ><i class="fas fa-minus" id="minus-${
-            coustomerCart[i]._id
-          }"></i></span>
+          <span class="minus" ><i class="fas fa-minus" id="minus-${coustomerCart[i]._id
+      }"></i></span>
           <span class="quantity">${coustomerCart[i].quantity}</span>
-          <span class="plus" ><i class="fas fa-plus" id="plus-${
-            coustomerCart[i]._id
-          }"></i><span>
+          <span class="plus" ><i class="fas fa-plus" id="plus-${coustomerCart[i]._id
+      }"></i><span>
         </td>
-        <td class="item-total">${
-          coustomerCart[i].price * coustomerCart[i].quantity
-        }$</td>
-        <td  ><span class="remove-icon"><i onclick="deleteItemFromCart('${
-          coustomerCart[i]._id
-        }')" class="fas fa-times"></i></span></td>
+        <td class="item-total">${coustomerCart[i].price * coustomerCart[i].quantity
+      }$</td>
+        <td  ><span class="remove-icon"><i onclick="deleteItemFromCart('${coustomerCart[i]._id
+      }')" class="fas fa-times"></i></span></td>
         </tr>`;
   }
   tableCountainer.innerHTML = rawHtml;
