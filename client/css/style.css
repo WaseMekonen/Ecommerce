@@ -9,7 +9,7 @@ a {
 
 body {
   font-family: "Quattrocento Sans", sans-serif;
-  max-width: 1800px;
+  width: 1300px;
   margin: 0 auto;
 }
 
@@ -617,6 +617,32 @@ footer {
 /* ******* MOBILE ******* */
 
 @media only screen and (max-width : 600px) {
+  .responsive-nav {
+    background: #071435;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    right: 0;
+  }
+
+  .menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    font-size: 1.6rem;
+    list-style: none;
+  }
+
+  .fa-shopping-cart {
+    font-size: none;
+  }
+
   #menu {
     display: none;
   }

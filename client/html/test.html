@@ -1,18 +1,30 @@
 <div class="card" id="card">
-    <div class="image" style="background-image: url(${products[i].image[0]})"
-        onmouseover="this.style.backgroundImage='url(${products[i].image[1]})'"
-        onmouseout="this.style.backgroundImage='url(${products[i].image[0]})'"></div>
-    <div class="details">
-        <h4>${products[i].name}</h4>
-        <p>${products[i].description}</p>
-    </div>
-    <div class="card-bottom">
-        <button class="addtocart-button"
-            onclick="addProductToCart('${products[i]._id}','${products[i].name}','${products[i].price}','${products[i].description}','${products[i].category}','${products[i].image[0]}','${products[i].quantity}')">add
-            to cart</button>
-        <button class="delete-button" id="delete-button" onclick="deleteItem('${products[i]._id}')">delete</button>
-        <span>
-            <h5>${products[i].price}$</h5>
-        </span>
-    </div>
+  <div
+    class="image"
+    style="background-image: url(${products[i].image[0]})"
+    onmouseover="this.style.backgroundImage='url(${products[i].image[1]})'"
+    onmouseout="this.style.backgroundImage='url(${products[i].image[0]})'"
+  ></div>
+  <div class="details">
+    <h4>${products[i].name}</h4>
+    <p>${products[i].description}</p>
+  </div>
+  <div class="card-bottom">
+    <button
+      class="addtocart-button"
+      onclick="addProductToCart('${products[i]._id}','${products[i].name}','${products[i].price}','${products[i].description}','${products[i].category}','${products[i].image[0]}','${products[i].quantity}')"
+    >
+      add to cart
+    </button>
+    <button
+      class="delete-button"
+      id="delete-button"
+      onclick="deleteItem('${products[i]._id}')"
+    >
+      delete
+    </button>
+    <span>
+      <h5>${products[i].price}$</h5>
+    </span>
+  </div>
 </div>

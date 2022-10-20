@@ -55,4 +55,3 @@ function updateProduct(e) {
       console.log(err);
     });
 }
-

@@ -1,36 +1,33 @@
 const mongoDb = require("mongodb"),
   objectId = mongoDb.ObjectId;
 
-function createNewCart(app, db) {
-
+function createNewCarts(app, db) {
   app.post("/carts", (req, res) => {
     // create new cart
     db.collection("carts").insertOne(req.body);
-    res.send("hello 1");
+    res.send("Carts has been created!");
   });
 }
 
-function getCartByID(app, db) {
-  app.get("/carts/:id", (req, res) => {
-    //  get id and return a cart
-    db.collection("carts").findOne(
-      { _id: objectId(req.params.id) },
-      (err, cart) => {
+function getCarts(app, db) {
+  app.get("/carts", (req, res) => {
+    //  get all carts
+    db.collection("carts")
+      .find({})
+      .toArray((err, cart) => {
         if (err) {
           console.log(err);
         }
         res.send(cart);
-      }
-    );
-    // res.send("Hello 2");
+        console.log(`${cart.length} produts has been found!`);
+      });
   });
 }
 
 function addItemToCart(app, db) {
-  app.patch("/carts/add", (req, res) => {
-    //  add item to cart
-    const reqBody = {
-      _id: objectId(req.body.id),
+  app.post("carts/:id", (req, res) => {
+    const id = objectId(req.params.id);
+    const item = {
       name: req.body.name,
       price: req.body.price,
       description: req.body.description,
@@ -38,19 +35,18 @@ function addItemToCart(app, db) {
       image: req.body.image,
       quantity: req.body.quantity,
     };
-
-    db.collection("carts").updateOne(
-      { _id: objectId("619028c92121e8d9e3a2c533") },
-      { $push: { products: reqBody } },
-      (err, addItem) => {
+    db.collection(`/carts`).insertOne(
+      { _id: id },
+      { $push: { items: item } },
+      (err, product) => {
         if (err) {
           throw err;
         } else {
-          console.log(addItem);
+          console.log(product);
         }
       }
     );
-    res.send("this is add to cart");
+    res.send("item has been added to the cart");
   });
 }
 
@@ -71,10 +67,9 @@ function removeItemFromCart(app, db) {
   });
 }
 
-
 module.exports = {
-  createNewCart,
-  getCartByID,
+  createNewCarts,
+  getCarts,
   addItemToCart,
   removeItemFromCart,
 };

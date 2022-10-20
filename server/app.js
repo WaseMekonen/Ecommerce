@@ -4,12 +4,22 @@ const express = require("express"),
   path = require("path"),
   app = express(),
   clientPath = path.join(__dirname, "..", "client"),
-  { getAllProduct,createProduct,updateProductByiD,removeProductByID,} = require("./routes/products"),
-  {createNewCart,getCartByID,addItemToCart,removeItemFromCart,} = require("./routes/carts"),
-  {createNewMessage, getAllmessages}= require("./routes/contact");
-const dotenv = require('dotenv');
+  {
+    getAllProduct,
+    createProduct,
+    updateProductByiD,
+    removeProductByID,
+  } = require("./routes/products"),
+  {
+    createNewCarts,
+    getCarts,
+    addItemToCart,
+    removeItemFromCart,
+  } = require("./routes/carts"),
+  { createNewMessage, getAllmessages } = require("./routes/contact");
+const dotenv = require("dotenv");
 dotenv.config();
-const URL = "mongodb://localhost:27017/"
+const URL = "mongodb://localhost:27017/";
 const PORT = 8080;
 // const URL = process.env.MONGO_URL;
 // const PORT = process.env.PORT || 8080;
@@ -25,12 +35,13 @@ mongoClient.connect(URL, (err, mongo) => {
   // Products:
   getAllProduct(app, db);
   createProduct(app, db);
+  ``;
   updateProductByiD(app, db);
   removeProductByID(app, db);
   // Cart:
   addItemToCart(app, db);
-  createNewCart(app, db);
-  getCartByID(app, db);
+  createNewCarts(app, db);
+  getCarts(app, db);
   removeItemFromCart(app, db);
   // Contact:
   createNewMessage(app, db);
@@ -38,5 +49,5 @@ mongoClient.connect(URL, (err, mongo) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`app is listening to port:${PORT}`);
+  console.log(`app is listening on port:${PORT}`);
 });
