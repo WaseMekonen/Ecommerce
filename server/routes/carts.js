@@ -1,5 +1,5 @@
-const mongoDb = require("mongodb"),
-  objectId = mongoDb.ObjectId;
+const mongoDb = require("mongodb");
+const objectId = mongoDb.ObjectId;
 
 function createNewCarts(app, db) {
   app.post("/carts", (req, res) => {
@@ -35,6 +35,7 @@ function addItemToCart(app, db) {
       image: req.body.image,
       quantity: req.body.quantity,
     };
+
     db.collection(`/carts`).insertOne(
       { _id: id },
       { $push: { items: item } },

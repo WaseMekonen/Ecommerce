@@ -26,7 +26,7 @@ function showItemByCategory(div, itemCategory, products) {
           <p>${description}</p>
       </div>
       <div class="card-bottom">
-          <button class="addtocart-button"  onclick='addProductToCart(${name})'>Add to cart</button>
+          <button class="addtocart-button"  onclick='addProductToCart()'>Add to cart</button>
           <span>
               <h5>${price}$</h5>
           </span>
@@ -51,8 +51,9 @@ function showItemByCategory(div, itemCategory, products) {
 //     });
 // }
 
-function addProductToCart(item) {
-  console.log(item);
+function addProductToCart() {
+  console.log("item added");
+  axios.patch();
 }
 
 // function updateCartCounter() {
