@@ -35,7 +35,6 @@ mongoClient.connect(URL, (err, mongo) => {
   // Products:
   getAllProduct(app, db);
   createProduct(app, db);
-  ``;
   updateProductByiD(app, db);
   removeProductByID(app, db);
   // Cart:

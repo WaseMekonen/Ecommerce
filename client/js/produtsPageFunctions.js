@@ -7,6 +7,7 @@ axios
   .get("/products")
   .then((response) => {
     showItemByCategory(cardContainer, pagesCategory.id, response.data);
+    console.log(response.data);
   })
   .catch((err) => {
     console.log(err);
@@ -26,7 +27,7 @@ function showItemByCategory(div, itemCategory, products) {
           <p>${description}</p>
       </div>
       <div class="card-bottom">
-          <button class="addtocart-button"  onclick='addProductToCart(${name})'>Add to cart</button>
+          <button class="addtocart-button"  onclick="addProductToCart('${name}')">Add to cart</button>
           <span>
               <h5>${price}$</h5>
           </span>
